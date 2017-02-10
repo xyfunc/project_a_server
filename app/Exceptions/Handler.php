@@ -44,6 +44,25 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        $init = $request->input("init_database");
+        if( $init ){
+            $host = $request->input("host");
+            $port = $request->input("port");
+            $database = $request->input("database");
+            $user = $request->input("user");
+            $password = $request->input("password");
+            if(!$host || !$port || !$database || !$user || !$password){
+                redirect("/init.php");
+            }
+            $path = public_path()."/../";
+            exec("cp $path.env.example $path.env");
+            $env_file = "$path.env";
+            exec("echo 'DB_HOST=$host\r\nDB_PORT=$port\r\nDB_DATABASE=$database\r\nDB_USERNAME=$user\r\nDB_PASSWORD=$password' >> $env_file");
+            return redirect("/");
+        }
+        if( !file_exists( public_path()."/../.env") ){
+           return redirect("/init.php");
+        }
         return parent::render($request, $exception);
     }
 
