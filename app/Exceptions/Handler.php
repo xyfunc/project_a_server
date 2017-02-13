@@ -59,7 +59,7 @@ class Handler extends ExceptionHandler
             $env_file = "$path.env";
             exec("echo 'DB_HOST=$host\r\nDB_PORT=$port\r\nDB_DATABASE=$database\r\nDB_USERNAME=$user\r\nDB_PASSWORD=$password' >> $env_file");
             exec("cd $path && php artisan migrate");
-            return redirect("/");
+            return redirect("/user/register");
         }
         if( !file_exists( public_path()."/../.env") ){
            return redirect("/init.php");

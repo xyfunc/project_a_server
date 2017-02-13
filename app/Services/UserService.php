@@ -18,4 +18,9 @@ class UserService
         return User::get();
     }
 
+    public static function count()
+    {
+        return User::count();
+    }
+
 }

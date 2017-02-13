@@ -21,6 +21,7 @@ class CreateProductsTable extends Migration
             $table->integer('unit_cost')->default(0);
             $table->integer('unit_price')->default(0);
             $table->integer('unit_id');
+            $table->integer('is_deleted')->default(0);
             $table->timestamps();
         });
     }

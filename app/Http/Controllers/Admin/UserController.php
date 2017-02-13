@@ -25,4 +25,14 @@ class UserController extends Controller
         ]);
     }
 
+    public function create()
+    {
+        return view('user.register', compact('data'));
+    }
+
+    public function login()
+    {
+        return view('user.login');
+    }
+
 }

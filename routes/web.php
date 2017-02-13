@@ -11,6 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', 'IndexController@index');
+
+Route::post('/user/register', 'Auth\RegisterController@store');
+Route::get('/user/register', 'Admin\UserController@create');
+Route::get('/user/login', 'Admin\UserController@login');
+Route::post('/user/login', 'Auth\LoginController@authenticate');
+
+Route::group([ 'namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['auth']], function (){
+
+    Route::resource('product', 'ProductController');
+
 });
+//Auth::routes();
+
+Route::get('/home', 'HomeController@index');

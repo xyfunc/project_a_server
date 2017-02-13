@@ -78,17 +78,10 @@ class RegisterController extends Controller
          */
         $validator = $this->validator($data);
         if( $validator->fails() ){
-            return response([
-                'data' => $validator->failed(),
-                'errcode' => 10000,
-                'errmsg' => '参数错误',
-            ]);
+            abort(500, '参数错误');
         }else{
-            return response([
-                'data' => $this->create($data),
-                'errcode' => 0,
-                'errmsg' => 'ok',
-            ]);
+            $this->create($data);
+            return redirect('/user/login');
         }
     }
 }

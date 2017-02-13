@@ -63,6 +63,10 @@
                 margin-bottom: 30px;
             }
         </style>
+        <script>
+            var data = <?php echo json_encode($data);?>;
+            console.log(data);
+        </script>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -72,7 +76,9 @@
                         <a href="{{ url('/home') }}">Home</a>
                     @else
                         <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
+                        @if( $data['status'] != 1)
+                            <a href="{{ url('/register') }}">Register</a>
+                        @endif
                     @endif
                 </div>
             @endif
