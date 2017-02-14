@@ -23,4 +23,10 @@ class IndexController
         }
         return view('welcome',['data' => $data]);
     }
+
+    public function init()
+    {
+        return view('init.init', ['data' => []]);
+    }
+
 }

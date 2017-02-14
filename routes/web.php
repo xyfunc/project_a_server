@@ -25,4 +25,4 @@ Route::group([ 'namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['au
 });
 //Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/init', 'IndexController@init');
