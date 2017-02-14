@@ -26,3 +26,4 @@ Route::group([ 'namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['au
 //Auth::routes();
 
 Route::get('/init', 'IndexController@init');
+Route::post('/init', 'IndexController@initDatabase');
