@@ -1,6 +1,6 @@
 <html>
 <head>
-    <script src="../../../public/js/app.js"></script>
+    <script src="js/app.js"></script>
 </head>
 <body>
 <h2>MySQL</h2>
@@ -9,7 +9,8 @@
 端口:<input name="port"><br>
 数据库:<input name="database"><br>
 账号:<input name="user"><br>
-密码:<input name="password"><br>
+密码:<input type="password" name="password"><br>
+<input type="hidden" name="init_database" value="1"><br>
 <button >提交按钮</button>
 </form>
 </body>
