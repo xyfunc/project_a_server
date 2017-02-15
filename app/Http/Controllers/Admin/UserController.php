@@ -35,7 +35,10 @@ class UserController extends Controller
 
     public function login()
     {
-        return view('user.login');
+        $data = [
+            "login_url" => url("/user/login"),
+        ];
+        return view('user.login', compact('data'));
     }
 
 }
