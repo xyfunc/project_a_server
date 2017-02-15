@@ -27,6 +27,9 @@ class UserController extends Controller
 
     public function create()
     {
+        $data = [
+            "register_url" => url("/user/register"),
+        ];
         return view('user.register', compact('data'));
     }
 
