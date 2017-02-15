@@ -45,7 +45,7 @@ class IndexController
             $path = public_path()."/../";
             $env_file = "$path.env";
             exec("echo 'DB_HOST=$host\r\nDB_PORT=$port\r\nDB_DATABASE=$database\r\nDB_USERNAME=$user\r\nDB_PASSWORD=$password' >> $env_file");
-            exec("cd $path && php artisan migrate");
+            exec("php {$path}artisan migrate");
             return redirect("/user/register");
         }
         return redirect('/init');
