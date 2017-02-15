@@ -8,7 +8,7 @@
 </head>
 <body>
 <h2>MySQL</h2>
-<form action="/user/register" method="post">
+<form action="user/register" method="post">
     name:<input name="name"><br>
     email:<input name="email"><br>
     password:<input type="password" name="password"><br>
