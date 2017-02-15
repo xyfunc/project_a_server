@@ -29,7 +29,7 @@ class IndexController
     public function init()
     {
         $data = [
-            "init_url" => url("/init"),
+            "init_url" => url("/database/init"),
         ];
         return view('init.init', ['data' => []]);
     }
@@ -52,7 +52,7 @@ class IndexController
             exec("php {$path}artisan migrate");
             return redirect("/user/register");
         }
-        return redirect('/init');
+        return redirect('/database/init');
     }
 
 }
