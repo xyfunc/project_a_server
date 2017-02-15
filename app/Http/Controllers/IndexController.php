@@ -31,7 +31,7 @@ class IndexController
         $data = [
             "init_url" => url("/database/init"),
         ];
-        return view('init.init', ['data' => []]);
+        return view('init.init', compact('data'));
     }
 
     public function initDatabase(Request $request)
