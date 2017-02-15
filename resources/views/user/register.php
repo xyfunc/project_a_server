@@ -1,6 +1,6 @@
 <html>
 <head>
-    <script src="/js/app.js"></script>
+    <script src="js/app.js"></script>
     <script type="application/javascript">
 
     </script>
