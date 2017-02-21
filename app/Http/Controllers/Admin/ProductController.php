@@ -10,13 +10,17 @@ namespace App\Http\Controllers\Admin;
 
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
 
     public function index()
     {
-        return view('product.index');
+        $data = [
+            'user' => Auth::user(),
+        ];
+        return view('product.index', compact('data'));
     }
 
 }

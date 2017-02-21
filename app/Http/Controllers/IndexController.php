@@ -9,9 +9,11 @@
 namespace App\Http\Controllers;
 
 
+use App\Model\User;
 use App\Services\UserService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use League\Flysystem\Exception;
 
 class IndexController extends Controller
 {

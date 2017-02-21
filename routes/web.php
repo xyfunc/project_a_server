@@ -17,6 +17,7 @@ Route::get('/welcome', 'IndexController@welcome');
 Route::post('/user/register', 'Auth\RegisterController@store');
 Route::get('/user/register', 'Admin\UserController@create');
 Route::get('/user/login', 'Admin\UserController@login');
+Route::get('/user/logout', 'Auth\LoginController@logout');
 Route::post('/user/login', 'Auth\LoginController@authenticate');
 
 Route::group([ 'namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['auth']], function (){
