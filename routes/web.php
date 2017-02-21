@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'IndexController@index');
+Route::get('/welcome', 'IndexController@welcome');
 
 Route::post('/user/register', 'Auth\RegisterController@store');
 Route::get('/user/register', 'Admin\UserController@create');
@@ -25,5 +26,5 @@ Route::group([ 'namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['au
 });
 //Auth::routes();
 
-Route::get('/database/init', 'IndexController@init');
-Route::post('/database/init', 'IndexController@initDatabase');
+Route::get('/init', 'IndexController@init');
+Route::post('/init', 'IndexController@initDatabase');
