@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>欢迎使用 StorePress</title>
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/init.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/init.css">
 </head>
 <body>
 <div class="container">
