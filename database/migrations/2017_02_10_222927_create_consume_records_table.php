@@ -21,6 +21,7 @@ class CreateConsumeRecordsTable extends Migration
             $table->integer('unit_price');
             $table->integer('total_price');
             $table->integer('pay');
+            $table->integer('status');
             $table->timestamp('consume_time');
             $table->timestamps();
         });

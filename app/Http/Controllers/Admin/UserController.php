@@ -49,7 +49,7 @@ class UserController extends Controller
     public function login()
     {
         if( Auth::check()) {
-            return redirect('admin/product');
+            return redirect('admin/purchase');
         }
         $data = [
             "login_url" => url("/user/login"),

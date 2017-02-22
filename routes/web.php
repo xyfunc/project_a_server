@@ -24,6 +24,7 @@ Route::post('/user/login', 'Auth\LoginController@authenticate');
 Route::group([ 'namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => ['auth']], function (){
 
     Route::resource('product', 'ProductController');
+    Route::resource('purchase', 'PurchaseController');
 
 });
 //Auth::routes();

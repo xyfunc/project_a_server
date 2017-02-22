@@ -72,7 +72,7 @@ class RegisterController extends Controller
 
     public function store(Request $request)
     {
-        $users = \App\Model\User::all();
+        $users = \App\Models\User::all();
         if( count($users) > 0 ){
             abort( 403, '已存在用户!不能再创建');
         }

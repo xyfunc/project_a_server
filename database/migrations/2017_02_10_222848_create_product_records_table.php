@@ -21,6 +21,7 @@ class CreateProductRecordsTable extends Migration
             $table->integer('unit_price');
             $table->integer('total_price');
             $table->integer('pay');
+            $table->integer('status');
             $table->timestamp('product_time');
             $table->timestamps();
         });

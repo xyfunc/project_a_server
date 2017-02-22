@@ -49,7 +49,7 @@ class LoginController extends Controller
         $email = $request->input('email');
         $password = $request->input('password');
         if (Auth::attempt(['email' => $email, 'password' => $password])) {
-            return redirect('admin/product');
+            return redirect('admin/purchase');
         }
         return redirect('user/login');
     }
